@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\usercon;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/main', [usercon::class,'main']);
+
+Route::get('/profile', [usercon::class,'profile']);
+
+Route::get('/searchBar', [usercon::class,'searchBar']);
+
+Route::get('/vendor', [usercon::class,'vendor']);
+
+
